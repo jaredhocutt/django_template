@@ -15,7 +15,7 @@ echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" > /etc/apt/
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 apt-get update
 
-apt-get install -y postgresql-9.4
+apt-get install -y postgresql-9.4 postgresql-server-dev-9.4
 
 service postgresql restart
 update-rc.d postgresql defaults

@@ -12,6 +12,8 @@ project_name/settings/*
 docs/build/
 docs/source/apps
 
+init_project.sh
+
 ###############################################################################
 # Python
 # https://github.com/github/gitignore/blob/master/Python.gitignore
