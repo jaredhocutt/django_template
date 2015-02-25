@@ -3,17 +3,19 @@
 read -p 'Enter the project name: ' name
 
 if [ -d '.vagrant' ]; then
-	vagrant destroy --force
+	vagrant destroy --force > /dev/null 2>&1
 	rm -rf .vagrant
 fi
 
 mv project_name $name
 
-sed "s/project_name/$name/" vagrant/setup.sh > vagrant/setup.sh
-sed "s/project_name/$name/" .gitignore > .gitignore
-sed "s/project_name/$name/" manage.py > manage.py
-sed "s/project_name/$name/" $name/wsgi.py > $name/wsgi.py
+sed -i.bak "s/project_name/$name/" vagrant/setup.sh
+sed -i.bak "s/project_name/$name/" .gitignore
+sed -i.bak "s/project_name/$name/" manage.py
+sed -i.bak "s/project_name/$name/" $name/wsgi.py
+sed -i.bak "s/project_name/$name/" $name/settings/settings.py
 
+rm **/*.bak
 rm init_project.sh
 
 echo 'Done.'
