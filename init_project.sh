@@ -22,5 +22,6 @@ rm init_project.sh
 
 git add .
 git commit -m "Initialized project from Django template"
+git remote rm origin
 
 echo 'Done.'
