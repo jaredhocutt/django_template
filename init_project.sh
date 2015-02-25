@@ -18,4 +18,7 @@ sed -i.bak "s/project_name/$name/" $name/settings/settings.py
 find . -name "*.bak" -exec rm -rf {} \;
 rm init_project.sh
 
+git add .
+git commit -m "Initialized project from Django template"
+
 echo 'Done.'
