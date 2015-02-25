@@ -15,7 +15,7 @@ sed -i.bak "s/project_name/$name/" manage.py
 sed -i.bak "s/project_name/$name/" $name/wsgi.py
 sed -i.bak "s/project_name/$name/" $name/settings/settings.py
 
-rm **/*.bak
+find . -name "*.bak" -exec rm -rf {} \;
 rm init_project.sh
 
 echo 'Done.'
