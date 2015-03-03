@@ -17,11 +17,13 @@ sed -i.bak "s/project_name/$name/" $name/settings/settings.py
 
 echo '' > README.md
 
+rm -rf .git
+git init
+
 find . -name "*.bak" -exec rm -rf {} \;
 rm init_project.sh
 
 git add .
-git commit -m "Initialized project from Django template"
-git remote rm origin
+git commit -m "Initial commit."
 
 echo 'Done.'
