@@ -3,7 +3,6 @@
 ###############################################################################
 
 *.sqlite3
-.vagrant
 .pycharm_helpers
 
 project_name/settings/*
