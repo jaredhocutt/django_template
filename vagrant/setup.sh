@@ -40,6 +40,7 @@ fi
 pip install -r requirements.txt
 
 python manage.py migrate
+python vagrant/superuser.py
 
 cat >>/home/vagrant/.bashrc <<"EOF"
 source /usr/local/bin/virtualenvwrapper.sh
